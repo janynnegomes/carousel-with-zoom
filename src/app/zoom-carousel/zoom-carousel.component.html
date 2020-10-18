@@ -1,9 +1,15 @@
-{{title}}
-<div class="carousel">
-  <div class="thumbnails">
-    <div class="thumb-image" *ngFor="let image of images">
-      <img [src]="image" alt="{{image}}" />
+<div class="carousel" [ngClass]="{'carousel-mobile':isMobile}">
+	<div class="thumbnails">
+		<div class="thumb-image" [ngClass]="{'thumb-image-active': activeThumbnail === image}"
+			*ngFor="let image of images" (click)="viewImage(image)" (mouseenter)="viewImage(image)">
+			<img [src]="image" alt="{{image}}" />
     </div>
-  </div>
-  <div class="image-viewer"></div>
-</div>
+		</div>
+		<div class="image-viewer-container" #imageViewerContainer (mouseout)="hideZoom(); hideMagnifier();"
+			(mousemove)="magnifierMove($event)">
+			<div class="magnifier" #magnifier></div>
+			<img class="image-viewer" #imageViewer/>
+		</div>
+			<div class="zoom" #zoom>
+			</div>
+		</div>

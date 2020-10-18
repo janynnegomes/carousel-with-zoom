@@ -20,3 +20,9 @@
   margin-left: 0.75rem;
   border-radius: 3px;
 }
+
+.carousel .zoom {
+  width: 400px;
+  background-color: red !important;
+  padding: 20px;
+}
