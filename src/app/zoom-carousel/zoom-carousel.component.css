@@ -4,6 +4,11 @@
   flex-direction: row;
   height: 400px;
   padding: 0.75rem;
+  width: 50%;
+}
+.carousel .thumbnails {
+  display: flex;
+  flex-direction: column;
 }
 .carousel .thumbnails .thumb-image {
   background-color: rgb(219, 216, 216);
@@ -12,11 +17,62 @@
   height: 60px;
   margin-bottom: 0.75rem;
   border-radius: 3px;
+  overflow: hidden;
 }
 
-.carousel .image-viewer {
-  background-color: rgb(211, 208, 208);
+.carousel .thumbnails .thumb-image.thumb-image-active {
+  box-shadow: 0 0 8px 0px #717171;
+}
+
+.carousel .image-viewer-container {
+  background-color: #ffffff;
   width: 100%;
   margin-left: 0.75rem;
   border-radius: 3px;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.carousel .image-viewer-container .magnifier {
+  background-color: rgba(255, 255, 255, 0.24);
+  border: solid 1px #ffffff;
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  pointer-events: none;
+}
+
+.carousel .zoom {
+  width: 400px;
+  background-color: #ffffff;
+  padding: 20px;
+  position: absolute;
+  top: 30px;
+  height: 300px;
+  border: solid 1px gray;
+}
+
+.carousel.is-mobile {
+  width: unset;
+  flex-direction: column-reverse;
+  height: calc(100vh - 2.5rem);
+}
+.carousel.is-mobile .image-viewer-container .magnifier,
+.carousel.is-mobile .zoom {
+  display: none;
+}
+
+.carousel.is-mobile .thumbnails {
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.carousel.is-mobile .thumbnails .thumb-image {
+  margin-bottom: 0;
+}
+.carousel.is-mobile .image-viewer-container {
+  width: 100%;
+  height: 100%;
+  margin: 0 0 0.75rem 0;
 }
