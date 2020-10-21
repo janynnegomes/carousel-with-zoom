@@ -32,6 +32,8 @@ export class ZoomCarouselComponent
 
   @ViewChild("zoom") zoom: ElementRef;
 
+  @ViewChild("carousel") carousel: ElementRef;
+
   @ViewChild("magnifier") magnifier: ElementRef;
   magnifierWidth: number = 0;
   magnifierHeight: number = 0;
@@ -82,10 +84,10 @@ export class ZoomCarouselComponent
         this.magnifierWidth * this.zoomLevel + "px ";
 
       //define
-      // this.zoom.nativeElement.style.width =
-      //   this.magnifierWidth * this.zoomLevel + "px";
-      // this.zoom.nativeElement.style.height =
-      //   this.magnifierHeight * this.zoomLevel + "px";
+      this.zoom.nativeElement.style.width =
+        this.magnifierWidth * this.zoomLevel + "px";
+      this.zoom.nativeElement.style.height =
+        this.magnifierHeight * this.zoomLevel + "px";
 
       let wM = this.magnifierWidth / 2;
       let hM = this.magnifierHeight / 2;
@@ -105,7 +107,7 @@ export class ZoomCarouselComponent
         this.cursorY = hM;
       }
 
-      // avoid magnifier out of top
+      // avoid magnifier out of bottom
       if (this.cursorY > this.imgViewerContainerHeight - hM) {
         this.cursorY = this.imgViewerContainerHeight - hM;
       }
@@ -116,7 +118,9 @@ export class ZoomCarouselComponent
 
       // change image zoom position
       this.zoom.nativeElement.style.backgroundPosition =
-        "-" + zoomX + "px -" + zoomY + "px";
+        zoomX + "px " + zoomY + "px";
+      this.zoom.nativeElement.style.left =
+        this.carousel.nativeElement.offsetWidth + 32 + "px";
     }
   }
 
@@ -158,11 +162,11 @@ export class ZoomCarouselComponent
   ngAfterContentInit() {}
 
   hideZoom() {
-    this.magnifier.nativeElement.style.display = "none";
+    this.zoom.nativeElement.style.display = "none";
   }
 
   hideMagnifier() {
-    this.zoom.nativeElement.style.display = "none";
+    this.magnifier.nativeElement.style.display = "none";
   }
 
   showZoom() {

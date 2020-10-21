@@ -1,4 +1,4 @@
-<div class="carousel" [ngClass]="{'carousel-mobile':isMobile}">
+<div class="carousel" [ngClass]="{'is-mobile':isMobile}" #carousel>
 	<div class="thumbnails">
 		<div class="thumb-image" [ngClass]="{'thumb-image-active': activeThumbnail === image}"
 			*ngFor="let image of images" (click)="viewImage(image)" (mouseenter)="viewImage(image)">
