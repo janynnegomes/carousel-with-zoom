@@ -1,6 +1,8 @@
 .product {
   &-title {
-    color: blue;
+    color: rgb(49, 28, 143);
+    font-size: 28px;
+    font-weight: 100;
   }
 
   &-old-price {
@@ -12,5 +14,25 @@
   &-price {
     font-weight: 100;
     font-size: 32px;
+    color: rgb(168, 21, 21);
+  }
+
+  .buy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .button {
+      margin: 5px;
+      width: 100%;
+      display: block;
+      text-align: center;
+      color: #fff;
+      &.buy-now {
+        background-color: rgb(46, 59, 172);
+      }
+      &.add-to-cart {
+        background-color: rgb(103, 134, 192);
+      }
+    }
   }
 }

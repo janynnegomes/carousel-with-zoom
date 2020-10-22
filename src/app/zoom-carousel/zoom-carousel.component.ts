@@ -6,7 +6,6 @@ import {
   HostListener,
   Input,
   OnInit,
-  VERSION,
   ViewChild
 } from "@angular/core";
 
