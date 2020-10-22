@@ -1,10 +1,19 @@
-/* Add application styles & imports to this file! */
+// custom fonts
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e7e7e7;
+}
 
 img {
   max-width: 100%;
 }
 .header {
-  background: blue;
+  background: rgb(49, 28, 143);
+  color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -13,4 +22,10 @@ img {
 .layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  .column {
+    color: #a7a7a7;
+    padding: 1rem;
+  }
 }
