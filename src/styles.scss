@@ -1,4 +1,16 @@
 /* Add application styles & imports to this file! */
+
 img {
   max-width: 100%;
+}
+.header {
+  background: blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
