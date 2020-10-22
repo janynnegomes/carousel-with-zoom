@@ -7,7 +7,6 @@ import { Component, VERSION } from "@angular/core";
 })
 export class AppComponent {
   name = "Angular " + VERSION.major;
-
   images = [
     "https://http2.mlstatic.com/D_NQ_NP_2X_612946-MLA43654089811_102020-F.webp",
     "https://http2.mlstatic.com/D_NQ_NP_2X_724968-MLA43654253363_102020-F.webp",

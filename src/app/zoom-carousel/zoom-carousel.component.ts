@@ -13,12 +13,12 @@ import {
 @Component({
   selector: "zoom-carousel",
   templateUrl: "./zoom-carousel.component.html",
-  styleUrls: ["./zoom-carousel.component.css"]
+  styleUrls: ["./zoom-carousel.component.scss"]
 })
 export class ZoomCarouselComponent
   implements OnInit, AfterViewInit, AfterContentInit {
   @Input()
-  title: string = "Carousel";
+  thumbnailPosition: string = "horizontal";
 
   activeThumbnail: string = "";
 
