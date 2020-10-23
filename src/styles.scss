@@ -21,9 +21,11 @@ img {
 
 .layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 1fr;
-
+  background-color: #fff;
+  border-radius: 1rem;
+  margin: 1rem;
   .column {
     color: #a7a7a7;
     padding: 1rem;
@@ -33,7 +35,7 @@ img {
 .button {
   border-radius: 5px;
   padding: 0.5rem;
-  background-color: #cfcfcf;
+  background: rgb(49, 28, 143);
   color: #5c5c5c;
   cursor: pointer;
 
