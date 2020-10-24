@@ -64,7 +64,6 @@
   .carousel {
     width: unset;
     flex-direction: column-reverse;
-    height: calc(100vh - 2.5rem);
 
     .thumbnails {
       flex-direction: row;
@@ -72,6 +71,8 @@
 
       .thumb-image {
         margin-bottom: 0;
+        width: 40px;
+        height: 40px;
       }
     }
 

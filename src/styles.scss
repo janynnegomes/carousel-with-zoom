@@ -19,11 +19,6 @@ img {
   justify-content: center;
 }
 
-@media screen and (max-width: 576px) {
-  .layout {
-    grid-template-columns: 1fr;
-  }
-}
 .layout {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
@@ -47,5 +42,12 @@ img {
   &:hover {
     background-color: #a3a3a3;
     color: #fcfcfc;
+  }
+}
+@media screen and (max-width: 576px) {
+  .layout {
+    grid-template-columns: 1fr;
+    margin: 0;
+    border-radius: 0;
   }
 }
