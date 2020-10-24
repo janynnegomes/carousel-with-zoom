@@ -1,6 +1,9 @@
 // custom fonts
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+@import "assets/normalize.scss";
+@import "assets/mixins.scss";
+
 body {
   font-family: "Noto Sans", sans-serif;
   margin: 0;
@@ -44,9 +47,18 @@ img {
     color: #fcfcfc;
   }
 }
-@media screen and (max-width: 576px) {
+
+@include breakpoint(mobile) {
   .layout {
     grid-template-columns: 1fr;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+@include breakpoint(tablet) {
+  .layout {
+    grid-template-columns: 1fr 1fr;
     margin: 0;
     border-radius: 0;
   }
