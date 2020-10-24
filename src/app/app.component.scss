@@ -1,6 +1,6 @@
 .product {
   &-title {
-    color: rgb(49, 28, 143);
+    color: $blue;
     font-size: 28px;
     font-weight: 100;
   }
@@ -28,10 +28,10 @@
     text-align: center;
     color: #fff;
     &.buy-now {
-      background-color: rgb(46, 59, 172);
+      background-color: $blue;
     }
     &.add-to-cart {
-      background-color: rgb(103, 134, 192);
+      background-color: $blue-light;
     }
   }
 }

@@ -17,3 +17,13 @@
     }
   }
 }
+
+@mixin flex_row() {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex_col() {
+  display: flex;
+  flex-direction: column;
+}
