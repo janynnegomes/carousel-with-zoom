@@ -1,3 +1,32 @@
+@media screen and (max-width: 576px) {
+  .carousel {
+    width: unset;
+    flex-direction: column-reverse;
+    height: calc(100vh - 2.5rem);
+
+    .thumbnails {
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      .thumb-image {
+        margin-bottom: 0;
+      }
+    }
+
+    .image-viewer-container {
+      width: 100%;
+      height: 100%;
+      margin: 0 0 0.75rem 0;
+      .magnifier {
+        display: none;
+      }
+    }
+    .zoom {
+      display: none;
+    }
+  }
+}
+
 .carousel {
   background-color: rgb(228, 227, 227);
   display: flex;
@@ -6,20 +35,9 @@
   padding: 0.75rem;
   width: 100%;
 
-  @media (max-width: 576) {
-    width: unset;
-    flex-direction: column-reverse;
-    height: calc(100vh - 2.5rem);
-  }
-
   .thumbnails {
     display: flex;
     flex-direction: column;
-
-    @media (max-width: 576) {
-      flex-direction: row;
-      justify-content: space-evenly;
-    }
 
     .thumb-image {
       background-color: rgb(219, 216, 216);
@@ -29,10 +47,6 @@
       margin-bottom: 0.75rem;
       border-radius: 3px;
       overflow: hidden;
-
-      @media (max-width: 576) {
-        margin-bottom: 0;
-      }
 
       &.thumb-image-active {
         box-shadow: 0 0 8px 0px #717171;
@@ -51,12 +65,6 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    @media (max-width: 576) {
-      width: 100%;
-      height: 100%;
-      margin: 0 0 0.75rem 0;
-    }
-
     .magnifier {
       background-color: rgba(255, 255, 255, 0.24);
       border: solid 1px #ffffff;
@@ -64,10 +72,6 @@
       width: 200px;
       height: 150px;
       pointer-events: none;
-
-      @media (max-width: 576) {
-        display: none;
-      }
     }
   }
 
@@ -82,9 +86,6 @@
     background-size: cover;
     border: solid 1px gray;
     animation: fadeIn 1s ease-in-out;
-    @media (max-width: 576) {
-      display: none;
-    }
   }
 }
 
