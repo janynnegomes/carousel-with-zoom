@@ -36,7 +36,7 @@ img {
   background: $gray-light;
   color: $gray-dark;
   cursor: pointer;
-
+  text-align: center;
   &:hover {
     background-color: #a3a3a3;
     color: #fcfcfc;
@@ -54,11 +54,17 @@ img {
       padding: 0;
     }
   }
+
+  .button {
+    width: unset;
+    display: block;
+    padding: 1rem;
+  }
 }
 
 @include breakpoint(tablet) {
   .layout {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     margin: 0;
     border-radius: 0;
 
@@ -66,5 +72,11 @@ img {
       text-align: center;
       padding: 0;
     }
+  }
+
+  .button {
+    width: unset;
+    display: block;
+    padding: 1rem;
   }
 }

@@ -1,3 +1,5 @@
+@import "../assets/variables.scss";
+
 .product {
   &-title {
     color: $blue;
@@ -22,11 +24,9 @@
   flex-direction: column;
 
   .button {
-    margin: 5px;
-    width: 100%;
     display: block;
-    text-align: center;
-    color: #fff;
+    color: $white;
+    margin: #{$margin/2};
     &.buy-now {
       background-color: $blue;
     }

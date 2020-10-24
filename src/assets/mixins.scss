@@ -27,3 +27,15 @@
   display: flex;
   flex-direction: column;
 }
+
+@mixin icon($src, $size) {
+  span.icon {
+    width: $size px;
+    heigth: $size px;
+    background: url($src);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: inline-block;
+  }
+}
