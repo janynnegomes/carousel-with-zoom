@@ -1,32 +1,3 @@
-@media screen and (max-width: 576px) {
-  .carousel {
-    width: unset;
-    flex-direction: column-reverse;
-    height: calc(100vh - 2.5rem);
-
-    .thumbnails {
-      flex-direction: row;
-      justify-content: space-evenly;
-
-      .thumb-image {
-        margin-bottom: 0;
-      }
-    }
-
-    .image-viewer-container {
-      width: 100%;
-      height: 100%;
-      margin: 0 0 0.75rem 0;
-      .magnifier {
-        display: none;
-      }
-    }
-    .zoom {
-      display: none;
-    }
-  }
-}
-
 .carousel {
   background-color: rgb(228, 227, 227);
   display: flex;
@@ -86,6 +57,35 @@
     background-size: cover;
     border: solid 1px gray;
     animation: fadeIn 1s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .carousel {
+    width: unset;
+    flex-direction: column-reverse;
+    height: calc(100vh - 2.5rem);
+
+    .thumbnails {
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      .thumb-image {
+        margin-bottom: 0;
+      }
+    }
+
+    .image-viewer-container {
+      width: 100%;
+      height: 100%;
+      margin: 0 0 0.75rem 0;
+      .magnifier {
+        display: none;
+      }
+    }
+    .zoom {
+      display: none;
+    }
   }
 }
 
