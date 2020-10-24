@@ -15,6 +15,7 @@ img {
   color: $white;
   @include flex_row();
   justify-content: center;
+  text-align: center;
 }
 
 .layout {
