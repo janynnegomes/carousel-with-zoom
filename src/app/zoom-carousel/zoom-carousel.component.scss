@@ -1,4 +1,5 @@
 @import "../../assets/variables.scss";
+@import "../../assets/mixins.scss";
 
 .carousel {
   background-color: $white;
@@ -12,8 +13,8 @@
     display: flex;
     flex-direction: column;
     .thumb-image {
-      background-color: rgb(219, 216, 216);
-      border: solid 1px rgb(110, 112, 110);
+      background-color: $white;
+      border: solid 1px $gray-dark;
       width: 60px;
       height: 60px;
       margin-bottom: 0.75rem;
@@ -21,14 +22,14 @@
       overflow: hidden;
 
       &.thumb-image-active {
-        box-shadow: 0 0 8px 0px #717171;
+        box-shadow: 0 0 8px 0px $gray-dark;
         animation: grow 0.3s ease-in;
       }
     }
   }
 
   .image-viewer-container {
-    background-color: #ffffff;
+    background-color: $white;
     width: 100%;
     margin-left: 0.75rem;
     border-radius: 3px;
@@ -39,7 +40,7 @@
 
     .magnifier {
       background-color: rgba(255, 255, 255, 0.24);
-      border: solid 1px #ffffff;
+      border: solid 1px $white;
       position: absolute;
       width: 200px;
       height: 150px;
@@ -49,19 +50,19 @@
 
   .zoom {
     width: 400px;
-    background-color: #ffffff;
+    background-color: $white;
     padding: 20px;
     position: absolute;
     top: 30px;
     height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
-    border: solid 1px gray;
+    border: solid 1px $gray-dark;
     animation: fadeIn 1s ease-in-out;
   }
 }
 
-@media (max-width: 600px) {
+@include breakpoint(tablet) {
   .carousel {
     width: unset;
     flex-direction: column-reverse;

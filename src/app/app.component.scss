@@ -1,4 +1,5 @@
 @import "../assets/variables.scss";
+@import "../assets/mixins.scss";
 
 .product {
   &-title {
@@ -16,12 +17,30 @@
   &-price {
     font-weight: 100;
     font-size: 32px;
-    color: rgb(168, 21, 21);
+    color: $red;
+  }
+
+  .properties {
+    .memory-sizes {
+      .button {
+        background-color: $white;
+        color: $gray-dark;
+        border: solid 1px $gray-dark;
+        margin: 0.3rem;
+        &:first-of-type {
+          margin-left: 0;
+        }
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
   }
 }
 .shopp {
   display: flex;
   flex-direction: column;
+  border-left: solid 1px $gray-light;
 
   .button {
     display: block;
@@ -33,5 +52,46 @@
     &.add-to-cart {
       background-color: $blue-light;
     }
+  }
+}
+
+@include breakpoint(mobile) {
+  .product {
+    .properties {
+      .memory-sizes {
+        .button {
+          &:first-of-type {
+            margin-left: 0.3rem;
+          }
+          &:last-of-type {
+            margin-right: 0.3rem;
+          }
+        }
+      }
+    }
+  }
+  .shopp {
+    border-left: 0;
+    border-top: solid 1px $gray-light;
+  }
+}
+@include breakpoint(tablet) {
+  .product {
+    .properties {
+      .memory-sizes {
+        .button {
+          &:first-of-type {
+            margin-left: 0.3rem;
+          }
+          &:last-of-type {
+            margin-right: 0.3rem;
+          }
+        }
+      }
+    }
+  }
+  .shopp {
+    border-left: 0;
+    border-top: solid 1px $gray-light;
   }
 }
