@@ -1,7 +1,7 @@
 @import "../../assets/variables.scss";
 
 .carousel {
-  background-color: rgb(228, 227, 227);
+  background-color: $white;
   display: flex;
   flex-direction: row;
   height: 400px;
@@ -9,8 +9,8 @@
   width: 100%;
 
   .thumbnails {
-    //@include flex_col();
-
+    display: flex;
+    flex-direction: column;
     .thumb-image {
       background-color: rgb(219, 216, 216);
       border: solid 1px rgb(110, 112, 110);
@@ -61,7 +61,7 @@
   }
 }
 
-@include breakpoint(mobile) {
+@media (max-width: 600px) {
   .carousel {
     width: unset;
     flex-direction: column-reverse;
