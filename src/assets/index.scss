@@ -1,0 +1,61 @@
+@import "variables.scss";
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: $gray-light;
+}
+
+img {
+  max-width: 100%;
+}
+.header {
+  background: $blue;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: #fff;
+  border-radius: 1rem;
+  margin: 1rem;
+  .column {
+    color: #a7a7a7;
+    padding: 1rem;
+  }
+}
+
+.button {
+  border-radius: 5px;
+  padding: 0.5rem;
+  background: rgb(49, 28, 143);
+  color: #5c5c5c;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #a3a3a3;
+    color: #fcfcfc;
+  }
+}
+
+@include breakpoint(mobile) {
+  .layout {
+    grid-template-columns: 1fr;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+@include breakpoint(tablet) {
+  .layout {
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    border-radius: 0;
+  }
+}
