@@ -55,6 +55,16 @@
   }
 }
 
+footer {
+  color: $gray-dark;
+  font-size: 0.75rem;
+  text-align: center;
+  a {
+    color: $blue;
+    font-weight: 600;
+  }
+}
+
 @include breakpoint(mobile) {
   .product {
     .properties {

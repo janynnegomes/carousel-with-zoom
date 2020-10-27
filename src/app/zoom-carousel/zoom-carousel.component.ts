@@ -46,14 +46,16 @@ export class ZoomCarouselComponent
   @Input()
   zoomLevel = 2;
 
-  viewImage(imageSrc) {
+  viewImage(imageSrc, showMagnifier = true) {
     if (this.imageViewerContainer && this.zoom) {
       this.imageViewerContainer.nativeElement.style.animation =
         "fadeIn 2s ease-in";
       this.imageViewerContainer.nativeElement.style.backgroundImage =
         "url(" + imageSrc + ")";
       this.activeThumbnail = imageSrc;
-      this.zoom.nativeElement.style.background = "url(" + imageSrc + ")";
+      if (showMagnifier) {
+        this.zoom.nativeElement.style.background = "url(" + imageSrc + ")";
+      }
     }
   }
 
@@ -124,13 +126,7 @@ export class ZoomCarouselComponent
     }
   }
 
-  ngOnInit() {
-    window.addEventListener("resize", () => {
-      setTimeout(() => {
-        console.log("mobile:", this.isMobile);
-      }, 0);
-    });
-  }
+  ngOnInit() {}
 
   get isMobile() {
     const orientation = window.screen.orientation.type;
@@ -150,13 +146,11 @@ export class ZoomCarouselComponent
   }
 
   ngAfterViewInit() {
-    this.viewImage(this.images[0]);
+    this.viewImage(this.images[0], false);
 
     //save image viewer container dimensions
     this.imgViewerContainerHeight = this.imageViewerContainer.nativeElement.offsetHeight;
     this.imgViewerContainerWidth = this.imageViewerContainer.nativeElement.offsetWidth;
-
-    console.log(this.imgViewerContainerWidth, this.imgViewerContainerHeight);
   }
 
   ngAfterContentInit() {}
