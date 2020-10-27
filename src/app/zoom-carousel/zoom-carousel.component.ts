@@ -68,8 +68,8 @@ export class ZoomCarouselComponent
     this.cursorX = event.offsetX;
     this.cursorY = event.offsetY;
 
-    const zoomX = this.cursorX * this.zoomLevel;
-    const zoomY = this.cursorY * this.zoomLevel;
+    let zoomX = this.cursorX * this.zoomLevel;
+    let zoomY = this.cursorY * this.zoomLevel;
 
     if (this.magnifier && this.imageViewerContainer) {
       // get magnifier dimensions
@@ -96,6 +96,7 @@ export class ZoomCarouselComponent
       // avoid magnifier out of left from image viewer container
       if (this.cursorX < wM) {
         this.cursorX = wM;
+        zoomX = 0;
       }
 
       // avoid magnifier out of right from image viewer container
