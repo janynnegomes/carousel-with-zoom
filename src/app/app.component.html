@@ -1,28 +1,39 @@
 <header class="header">
-	<h1>Demo Zoom Component</h1>
+  <h1>Demo Zoom Component</h1>
 </header>
 <section class="layout">
-	<div class="column">
-		<zoom-carousel [thumbnailPosition]="'horizontal'" [images]="images"></zoom-carousel>
-	</div>
-	<div class="column product">
-		<h3 class="product-title"> iPhone 11 64 GB Preto</h3>
-		<div class="properties">
-			<p>Internal memory: <label class="bold">128GB</label></p>
-			<div class="memory-sizes">
-				<a class="button">64GB</a>
-				<a class="button">128GB</a>
-				<a class="button">256GB</a>
-			</div>
-		</div>
-	</div>
-	<div class="column shopp">
-		<h3 class="product-title">Estoque disponível</h3>
-		<h4 class="product-old-price">R$5.000</h4>
-		<h1 class="product-price">R$3.000,00</h1>
-		<div class="buy">
-			<a class="button buy-now">Buy</a>
-			<a class="button add-to-cart">Add to cart</a>
-		</div>
-	</div>
+  <div class="column">
+    <zoom-carousel
+      [thumbnailPosition]="'horizontal'"
+      [images]="images"
+    ></zoom-carousel>
+  </div>
+  <div class="column product">
+    <h3 class="product-title">iPhone 11 64 GB Preto</h3>
+    <div class="properties">
+      <p>Internal memory: <label class="bold">128GB</label></p>
+      <div class="memory-sizes">
+        <a class="button">64GB</a>
+        <a class="button">128GB</a>
+        <a class="button">256GB</a>
+      </div>
+    </div>
+  </div>
+  <div class="column shopp">
+    <h3 class="product-title">Estoque disponível</h3>
+    <h4 class="product-old-price">R$5.000</h4>
+    <h1 class="product-price">R$3.000,00</h1>
+    <div class="buy">
+      <a class="button buy-now">Buy</a>
+      <a class="button add-to-cart">Add to cart</a>
+    </div>
+  </div>
 </section>
+<footer>
+  <p>
+    See the source on Stackblitz
+    <a href="https://stackblitz.com/edit/carrousel-with-zoom" target="_blank"
+      >https://stackblitz.com/edit/carrousel-with-zoom</a
+    >
+  </p>
+</footer>

@@ -48,9 +48,6 @@ export class ZoomCarouselComponent
 
   viewImage(imageSrc) {
     if (this.imageViewerContainer && this.zoom) {
-      // update image src
-      const oldBg = this.imageViewerContainer.nativeElement.style
-        .backgroundImage;
       this.imageViewerContainer.nativeElement.style.animation =
         "fadeIn 2s ease-in";
       this.imageViewerContainer.nativeElement.style.backgroundImage =
