@@ -48,10 +48,9 @@ export class ZoomCarouselComponent
 
   viewImage(imageSrc, showMagnifier = true) {
     if (this.imageViewerContainer && this.zoom) {
-      this.imageViewerContainer.nativeElement.style.animation =
-        "fadeIn 2s ease-in";
       this.imageViewerContainer.nativeElement.style.backgroundImage =
         "url(" + imageSrc + ")";
+      this.imageViewerContainer.nativeElement.classList.add("fade-in");
       this.activeThumbnail = imageSrc;
       if (showMagnifier) {
         this.zoom.nativeElement.style.background = "url(" + imageSrc + ")";
